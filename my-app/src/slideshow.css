@@ -1,0 +1,112 @@
+/* components/Slideshow.css */
+.slideshow-container {
+  position: relative;
+  display: flex;
+  justify-content: center!important;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+.slideshow-column {
+  flex: 1;
+  position: relative;
+}
+
+.left-column {
+  margin-right: 10px;
+}
+
+.right-column {
+  margin-left: 10px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  width: 500px;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.left-slide {
+  transform: translateX(-100%);
+}
+
+.left-slide.active {
+  transform: translateX(0) scale(1.1);
+}
+
+.right-slide {
+  transform: translateX(100%);
+}
+
+.right-slide.active {
+  transform: translateX(0) scale(1.1);
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.slide-image {
+  width: 100%;
+  object-fit: center;
+  object-fit: contain !important;
+}
+
+.slide.active .slide-content {
+  transform: translateY(0);
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Zoom effect on hover */
+.slide:hover {
+  transform: scale(1.05);
+  z-index: 3;
+}

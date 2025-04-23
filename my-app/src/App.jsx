@@ -6,30 +6,31 @@ import Button from './components/Button';
 
 const images = [
   {
+    url: "/jed's mom.jpg",
+    title: "Professional Life",
+    description: ""
+  },
+  {
     url: "/flyer.jpg",
-    title: "Early Childhood",
-    description: "Age 5 - First day at school"
+    title: "Woman Commisioner",
+    description: ""
   },
   {
     url: "/recieving award.jpg",
-    title: "Elementary School",
-    description: "Age 10 - School performance"
+    title: "Recieving  Award",
+    description: ""
   },
   {
     url: "/in a meeting.jpg",
-    title: "Teen Years",
-    description: "Age 15 - High school graduation"
+    title: "Admist Friends",
+    description: ""
   },
   {
     url: "/with friends.jpg",
-    title: "Young Adult",
-    description: "Age 20 - University days"
+    title: "Admist co-workers",
+    description: ""
   },
-  {
-    url: "/jed's mom.jpg",
-    title: "Professional Life",
-    description: "Age 30 - First major achievement"
-  }
+ 
 ];
 
 const pages = [
@@ -155,7 +156,7 @@ const App = () => {
                 </li>
                 <li className="nav-item">
                   <div className='nav-top'></div>
-                  <Button btn="About" class={`nav-link ${aboutActive ? 'active' : ''}`} onClick={handleAboutClick} />
+                  <Button btn="About" class={`nav-btn nav-link ${aboutActive ? 'active' : ''}`} onClick={handleAboutClick} />
                 </li>
                 <li className="nav-item">
                   <div className='nav-top'></div>
@@ -225,6 +226,7 @@ const App = () => {
           <Slideshow images={images} isMobile={isMobile} />
         </section>
 
+
         <section id="quote">
           <div className='quote'>
             <h2 className='section-title'>Biblical Quote</h2>
@@ -260,6 +262,7 @@ const App = () => {
             )}
           </div>
         </div>
+     
         <center><p className='footer-text'>Copyright&copy; Love Tagoe @{new Date().getFullYear()}</p></center>
       </footer>
     </>

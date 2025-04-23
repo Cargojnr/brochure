@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -99,7 +104,9 @@ h1, h2, h3, h4, h5 {
 .nav-item {
   margin: 0 10px;
   position: relative;
+  cursor: pointer;
 }
+
 
 .nav-link {
   text-decoration: none;
@@ -138,10 +145,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 10% top;
   border: 5px solid white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -153,6 +161,7 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   max-width: 600px;
   margin: 0 auto;
+
 }
 
 .hero-tag {
@@ -163,6 +172,7 @@ h1, h2, h3, h4, h5 {
   border-radius: 5px;
   margin-bottom: 15px;
   display: inline-block;
+  padding-left: 1.75rem !important;
 }
 
 .hero-bond {
@@ -170,7 +180,7 @@ h1, h2, h3, h4, h5 {
   background: oklch(55.8% 0.288 302.321);
   height: 100%;
   width: 10px;
-  top: 0;
+  top: -.1rem;
   left: 10px;
   border: 2px solid white;
 }
@@ -299,6 +309,7 @@ footer {
   background: #fee7fee2;
   padding: 30px 0 15px;
   margin-top: 50px;
+ 
 }
 
 .footer-container {
@@ -306,6 +317,8 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-lists {
@@ -390,6 +403,10 @@ footer {
     justify-content: space-between;
     gap: 40px;
   }
+
+  /* .nav-btn {
+    display: none !important;
+    } */
   
   .hero-profile {
     flex: 0 0 300px;

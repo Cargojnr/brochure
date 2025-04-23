@@ -1,0 +1,96 @@
+/* Mobile Slideshow */
+.mobile-slideshow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px 0;
+  }
+  
+  .slide {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .slide.active {
+    transform: scale(0.98);
+  }
+  
+  .slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .slide-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+  }
+  
+  .slide-content p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-dots {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 8px;
+  }
+  
+  .mobile-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  .mobile-dots .dot.active {
+    background: oklch(55.8% 0.288 302.321);
+  }
+  
+  /* Hide scrollbar for slides container */
+  .slides-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slides-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .slide {
+      flex: 0 0 90%;
+      height: 250px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-slideshow {
+      display: none;
+    }
+  }

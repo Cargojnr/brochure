@@ -5,6 +5,17 @@ import '../slideshow.css'; // We'll create this next
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   // Auto-advance slides
   useEffect(() => {
@@ -27,7 +38,8 @@ const Slideshow = ({ images }) => {
   return (
     <div className="slideshow-container" >
       {/* Left column slides */}
-      <div className="slideshow-column left-column">
+      {!isMobile && (
+        <div className="slideshow-column left-column" >
         {images.map((image, index) => (
           <div
             key={`left-${index}`}
@@ -48,6 +60,8 @@ const Slideshow = ({ images }) => {
           </div>
         ))}
       </div>
+      ) }
+      
 
       {/* Right column slides */}
       <div className="slideshow-column right-column">

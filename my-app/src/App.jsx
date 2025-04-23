@@ -152,12 +152,13 @@ const App = () => {
                 </li>
                 <li className="nav-item">
                   <div className='nav-top'></div>
-                  <Link link="Gallery" class="nav-link" onClick={handleGalleryScroll} />
+                  <Button btn="About" class={`nav-btn nav-link ${aboutActive ? 'active' : ''}`} onClick={handleAboutClick} />
                 </li>
                 <li className="nav-item">
                   <div className='nav-top'></div>
-                  <Button btn="About" class={`nav-btn nav-link ${aboutActive ? 'active' : ''}`} onClick={handleAboutClick} />
+                  <Link link="Gallery" class="nav-link" onClick={handleGalleryScroll} />
                 </li>
+
                 <li className="nav-item">
                   <div className='nav-top'></div>
                   <Link link="Contact" class="nav-link" onClick={() => handleNavClick('contact')} />

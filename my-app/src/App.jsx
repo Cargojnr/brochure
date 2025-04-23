@@ -38,7 +38,7 @@ const pages = [
     url: '/jed\'s mom2.jpg',
     clientName: 'HON. Ps Love Tagoe',
     clientTitle: '(Deputy Women\'s Commisioner U.N)',
-    heroTag: 'Introducing To You MRS LOVE TAGOE',
+    heroTag: 'Introducing To You Ms. LOVE TAGOE',
     heroHead: 'Born on a Sunday in the year 1978 on April 23.',
     heroText: 'Nationality, Ghanaian. Born to Mr Jonas Tagoe and Mrs Joyce Tagoe and was raised in Accra Osu with Three siblings. She has three children.',
   }
